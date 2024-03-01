@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <label for="">First Name</label>
+    <input type="text" name="fname" id=""><br><br>
+
+    <label for="">Last Name</label>
+    <input type="text" name="lname" id=""><br><br>
+
+    <label for="">Email</label>
+    <input type="email" name="email" id=""><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+
+{% endblock %}
